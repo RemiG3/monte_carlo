@@ -1,5 +1,4 @@
 
-
 class Main{
 	
 	
@@ -7,19 +6,18 @@ class Main{
 		
 		long startTime = System.currentTimeMillis();
 		
+		double rayon = 10;
 		double c = 0;
-		double a = 0, b = 1;
-		double M = 10;
-		double n = 100_000_000;
+		double n = 10_000_000;
 		for(long i = 1; i < n; i++){
-			double xi = Math.random()*(b-a);
-			double yi = Math.random()*M;
+			double xi = Math.random()*rayon;
+			double yi = Math.random()*rayon;
 			
-			if(yi <= Math.sqrt((b-a)-Math.pow(xi, 2)))
+			if((xi*xi) + (yi*yi) <= (rayon * rayon))
 				c++;
 		}
 		
-		double result = ((c*(b-a)*M) / n)*4;
+		double result = ((c / n)*4);
 		
 		long endTime = System.currentTimeMillis();
 		
@@ -28,4 +26,3 @@ class Main{
 	}
 	
 }
-
