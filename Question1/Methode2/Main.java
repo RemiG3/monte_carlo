@@ -18,7 +18,8 @@ class Main{
 		long startTime = System.currentTimeMillis();
 		
 		double c = 0;
-		long n = 10_000_000;
+		double n = 10_000_000;
+		
 		for(long i = 1; i < n; i++){
 			double xi = Math.random()*rayon;
 			double yi = Math.random()*rayon;
@@ -35,7 +36,7 @@ class Main{
 				c++;
 		}
 		
-		double result = (c / n)*4;
+		double result = ((c / n)*4);
 		
 		long endTime = System.currentTimeMillis();
 		
@@ -81,4 +82,3 @@ class DrawMehod extends JFrame{
 	}
 	
 }
-
