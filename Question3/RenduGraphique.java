@@ -8,7 +8,14 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Polygon;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-
+/**
+ * Attention : la méthode utilisée à tendance à surchargée la RAM.
+ * Cela peut aller jusqu'à un échec en cours d'éxécution : OutOfMemoryError
+ * 
+ * Cela dépend de la machine utilisée,
+ * Il est conseillé de baisser le nombre de tirages lors du lancement en cas de machine moins performante.
+ * Merci.
+ */
 public class RenduGraphique extends Application {
    // Création du groupe
    private static Group root = new Group();
