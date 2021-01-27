@@ -6,7 +6,7 @@ class Method3 {
         double nb_Aiguille;
         double lg_aiguille;
         double lg_latte;
-        double lg_parquet;     //il y a 10 lattes de parquet
+        double lg_parquet;
 
         if(args.length == 4){
             nb_Aiguille = Double.parseDouble(args[0]);
@@ -20,7 +20,7 @@ class Method3 {
             nb_Aiguille = 50_000_000;
             lg_aiguille = 2.5;
             lg_latte = 3;
-            lg_parquet = 10000 * lg_latte;     //il y a 10 lattes de parquet
+            lg_parquet = 10000 * lg_latte;     //longueur totale du parquet
 
             System.out.println("nb needles = " + nb_Aiguille);
             System.out.println("size needle = " + lg_aiguille);
@@ -43,12 +43,12 @@ class Method3 {
         double pi_appro;
 
         //boucle principale
-        //on lance les aiguilles une par une et on regarde sa position par rapport aux lattes
+        //on lance les aiguilles une par une et on regarde leurs positions par rapport aux lattes
         for (int i = 0; i < nb_Aiguille; i++){
             //on place le premier point sur le parquet
             x1 = Math.random() * (lg_parquet - (lg_aiguille * 2) + lg_aiguille);    // attention :  si le point est trop proche de la bordure
             y1 = Math.random() * (lg_parquet - (lg_aiguille * 2) + lg_aiguille);    //              le second pourrait sortir de la zone et faussé les résultats
-            //on place le second point a une distance a
+            //on place le second point a une distance egal a la taille des aiguilles
             theta = Math.random() * 360;
             x2 = x1 + (lg_aiguille * Math.cos(Math.toRadians(theta)));
             y2 = y1 + (lg_aiguille * Math.sin(Math.toRadians(theta)));
